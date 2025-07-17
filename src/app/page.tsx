@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Navbar from "../app/components/Navbar";
-import AthkarContent from "../app/components/AthkarContent";
-
 export default function Page() {
   const [activeTab, setActiveTab] = useState("morning");
 
@@ -12,15 +10,13 @@ export default function Page() {
       <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex flex-col items-center py-8 px-4 font-sans transition-colors duration-500">
         <div className="w-full max-w-xl bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-6">
           <header className="flex justify-between items-center mb-4">
-            <h1 className="text-3xl font-extrabold text-blue-900 dark:text-blue-400 rtl">
+            {/* <h1 className="text-3xl font-extrabold text-blue-900 dark:text-blue-400 rtl">
               🌙 تطبيق الأذكار
-            </h1>
+            </h1> */}
           </header>
-
-          <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
-
-          <AthkarContent activeTab={activeTab} />
+        <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
         </div>
+
       </div>
   );
 }
